@@ -23,7 +23,6 @@ if SERVER then
     function ENT:Use(activator, caller, useType, value)
         if caller:IsPlayer() then
             net.Start("OpenNPCBaseMenu")
-            net.WriteEntity(caller)
             net.Send(caller)
         end
     end
