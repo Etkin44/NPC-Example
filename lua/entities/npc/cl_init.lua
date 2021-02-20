@@ -55,9 +55,7 @@ if CLIENT then
         cam.End3D2D()
     end
 
-    net.Receive("OpenNPCBaseMenu", function(len, ply)
-        local caller = net.ReadEntity()
-        if not caller:IsPlayer() then return end
+    net.Receive("OpenNPCBaseMenu", function(len)
         OpenNPCBaseMenuFunction()
     end)
 end
