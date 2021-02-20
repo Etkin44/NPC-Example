@@ -48,7 +48,7 @@ function ENT:Draw()
     cam.Start3D2D(self:WorldSpaceCenter(), ang, 0.1)
     draw.RoundedBox(0, -125, -430, 250, 40, color_background)
 
-    if LocalPlayer():GetEyeTrace().Entity:GetClass() == "npc" then
+    if LocalPlayer():GetEyeTrace().Entity:GetClass() == self then
         draw.SimpleText("NPC Example", "NPC_F1", -90, -430, color_white)
     else
         draw.SimpleText("NPC Example", "NPC_F1", -90, -430, color_gray)
