@@ -14,10 +14,7 @@ if SERVER then
         self:SetUseType(SIMPLE_USE)
         self:DropToFloor()
         self:SetMaxYawSpeed(90)
-
-        if self:GetPhysicsObject():IsValid() then
-            self:GetPhysicsObject():Wake()
-        end
+        self:PhysWake()
     end
 
     function ENT:Use(activator, caller, useType, value)
