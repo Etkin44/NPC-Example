@@ -51,7 +51,7 @@ end
 function ENT:Draw() --NPC Draw
     local ply = LocalPlayer()
     self:DrawModel()
-    local ang = LocalPlayer():EyeAngles()
+    local ang = ply:EyeAngles()
     ang = Angle(0, ang.y, 0)
     ang:RotateAroundAxis(ang:Forward(), 180)
     ang:RotateAroundAxis(ang:Right(), 90)
